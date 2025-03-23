@@ -32,4 +32,4 @@ jobs:
           git config user.email github-actions@github.com
           git add papers
           git commit -m "Updated papers via scraping" || echo "No changes"
-          git push
+          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:${{ github.ref_name }}
