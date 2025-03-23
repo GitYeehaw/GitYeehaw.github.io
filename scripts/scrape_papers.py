@@ -6,10 +6,6 @@ import os
 BASE_URL = "https://arxiv.org"
 LIST_URL = "https://arxiv.org/list/cs/new"
 
-# Make directory for PDFs if it doesn't exist
-pdf_dir = "papers"
-os.makedirs(pdf_dir, exist_ok=True)
-
 # Get webpage content
 response = requests.get(LIST_URL)
 soup = BeautifulSoup(response.text, 'html.parser')
