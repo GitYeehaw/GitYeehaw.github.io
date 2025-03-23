@@ -28,9 +28,9 @@ jobs:
       - name: Commit and Push changes
         working-directory: ${{ github.workspace }}
         run: |
-          git pull --rebase origin main
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add papers
+          git pull --rebase origin main
           git commit -m "Updated papers via scraping" || echo "No changes"
           git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:${{ github.ref_name }}
