@@ -6,6 +6,8 @@ import os
 BASE_URL = "https://arxiv.org"
 LIST_URL = "https://arxiv.org/list/cs/new"
 
+pdf_dir = "papers"  # assuming this directory already exists
+
 # Get webpage content
 response = requests.get(LIST_URL)
 soup = BeautifulSoup(response.text, 'html.parser')
