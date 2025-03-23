@@ -1,1 +1,9 @@
+<div id="papers">
+  <!-- dynamically generated list of papers -->
+  <ul>
+    <li><a href="papers/paper1.pdf">Title 1</a></li>
+    <li><a href="papers/paper2.pdf">Title 2</a></li>
+    <!-- more papers -->
+  </ul>
+</div>
 
