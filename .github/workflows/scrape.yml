@@ -21,9 +21,12 @@ jobs:
         run: pip install requests beautifulsoup4
       
       - name: Run scraping script
+        working-directory: ${{ github.workspace }}
         run: python scripts/scrape_papers.py
+        
       
       - name: Commit and Push changes
+        working-directory: ${{ github.workspace }}
         run: |
           git config user.name GitYeehaw
           git config user.email github-actions@github.com
