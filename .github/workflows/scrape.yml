@@ -21,7 +21,7 @@ jobs:
         run: pip install requests beautifulsoup4
       
       - name: Run scraping script
-        run: python scrape_papers.py
+        run: python scripts/scrape_papers.py
       
       - name: Commit and Push changes
         run: |
