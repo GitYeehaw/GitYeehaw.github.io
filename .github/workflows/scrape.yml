@@ -28,7 +28,7 @@ jobs:
       - name: Commit and Push changes
         working-directory: ${{ github.workspace }}
         run: |
-          git config user.name GitYeehaw
+          git config user.name github-actions
           git config user.email github-actions@github.com
           git add papers/
           git commit -m "Updated papers via scraping" || echo "No changes"
